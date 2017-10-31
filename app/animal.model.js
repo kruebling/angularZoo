@@ -1,9 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Animal = (function () {
-    function Animal(id, species, name, age, diet, location, careTakers, sex, likes, dislikes) {
+    function Animal(id, species, type, name, age, diet, location, careTakers, sex, likes, dislikes) {
         this.id = id;
         this.species = species;
+        this.type = type;
         this.name = name;
         this.age = age;
         this.diet = diet;
