@@ -5,11 +5,13 @@ import { Animal } from './animal.model';
   selector: 'app-root',
   template: `
     <div class="container">
-      <h3>Angular Animals:</h3>
-      <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
-      <hr>
-      <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
-      <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
+      <div class="card card-body">
+        <h3>Angular Animals:</h3>
+        <animal-list [childAnimalList]="masterAnimalList" (clickEditSender)="editAnimal($event)" (clickDeleteSender)="deleteAnimal($event)"></animal-list>
+        <hr>
+        <edit-animal [childSelectedAnimal]="selectedAnimal" (doneEditing)="finishedEditing()"></edit-animal>
+        <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
+      </div>
     </div>
   `
 })
@@ -27,6 +29,10 @@ export class AppComponent {
 
   editAnimal(clickedAnimal) {
     this.selectedAnimal = clickedAnimal;
+  }
+
+  deleteAnimal(clickedAnimal){
+    this.masterAnimalList.splice(this.masterAnimalList.indexOf(clickedAnimal), 1);
   }
 
   finishedEditing() {
