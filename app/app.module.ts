@@ -1,11 +1,11 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent }   from './app.component';
+import { Task }   from './app.component';
 
 @NgModule({
   imports: [ BrowserModule ],
-  declarations: [ AppComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [ Task ],
+  bootstrap:    [ Task ]
 })
 
 export class AppModule { }
