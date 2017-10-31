@@ -16,4 +16,4 @@ var Animal = (function () {
     return Animal;
 }());
 exports.Animal = Animal;
-//# sourceMappingURL=animal-model.js.map
+//# sourceMappingURL=animal.model.js.map
