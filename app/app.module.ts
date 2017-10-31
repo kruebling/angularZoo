@@ -5,7 +5,10 @@ import { FormsModule }  from '@angular/forms';
 
 @NgModule({
   imports: [ BrowserModule ],
-  declarations: [ AppComponent ],
+  declarations: [
+    AppComponent,
+    
+   ],
   bootstrap:    [ AppComponent ]
 })
 
