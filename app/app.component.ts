@@ -7,11 +7,11 @@ import { ANIMALS } from './seed-animals';
   template: `
     <div class="container">
       <div class="card card-body">
-        <h3>Angular Animals:</h3>
+        <h1>Angular Animals:</h1><br>
         <animal-list [childAnimalList]="masterAnimalList" (clickEditSender)="editAnimal($event)" (clickDeleteSender)="deleteAnimal($event)"></animal-list>
         <hr>
         <animal-edit [childSelectedAnimal]="selectedAnimal" (doneEditingSender)="doneEditing()">Brushin Hair...</animal-edit>
-
+        <animal-add (newAnimalSender)="addAnimal($event)">Birthin...</animal-add>
       </div>
     </div>
   `

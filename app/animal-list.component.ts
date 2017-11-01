@@ -32,8 +32,8 @@ import { Animal } from './animal.model';
         <td>{{animal.likes}}</td>
         <td>{{animal.dislikes}}</td>
         <td>
-          <button (click)='editAnimal(animal)'>Edit</button>
-          <button (click)='deleteAnimal(animal)'>Delete</button>
+          <button class="btn btn-info" (click)='editAnimal(animal)'>Edit</button>
+          <button class="btn btn-danger" (click)='deleteAnimal(animal)'>Delete</button>
         </td>
       </tr>
     </tbody>

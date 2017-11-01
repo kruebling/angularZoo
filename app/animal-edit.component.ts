@@ -5,13 +5,13 @@ import { Animal } from './animal.model';
   selector: 'animal-edit',
   template: `
     <div *ngIf="childSelectedAnimal">
-      <div class="card card-body">
-        <h3>{{childSelectedAnimal.name}}</h3>
+      <div class="well">
+        <h2>{{childSelectedAnimal.name}}</h2>
         <hr>
-        <h3>Edit</h3>
+        <h3>Edit:</h3>
         <label>Change Animal ID:</label>
         <input [(ngModel)]="childSelectedAnimal.id"><br>
-        <label>Change Animal Special:</label>
+        <label>Change Animal Species:</label>
         <input [(ngModel)]="childSelectedAnimal.species"><br>
         <label>Change Animal Type:</label>
         <input [(ngModel)]="childSelectedAnimal.type"><br>
@@ -31,7 +31,7 @@ import { Animal } from './animal.model';
         <input [(ngModel)]="childSelectedAnimal.likes"><br>
         <label>Change Animal Dislikes:</label>
         <input [(ngModel)]="childSelectedAnimal.dislikes"><br>
-        <button (click)="doneEditing()">Finished Editing</button>
+        <button class="btn btn-info" (click)="doneEditing()">Finished Editing</button>
       </div>
     </div>
   `
