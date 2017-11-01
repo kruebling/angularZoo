@@ -4,6 +4,11 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'animal-list',
   template: `
+  <select (change)="onChange($event.target.value)">
+    <option value="all">All Animals</option>
+    <option value="old">Older Animals</option>
+    <option value="young">Younger Animals</option>
+  </select><br>
   <table class="table">
     <thead>
       <th>ID</th>
@@ -19,7 +24,7 @@ import { Animal } from './animal.model';
       <th>Dislikes</th>
     </thead>
     <tbody>
-      <tr *ngFor="let animal of childAnimalList">
+      <tr *ngFor="let animal of childAnimalList | age:filterByAge">
         <td>{{animal.id}}</td>
         <td>{{animal.species}}</td>
         <td>{{animal.type}}</td>
@@ -45,6 +50,7 @@ export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
   @Output() clickEditSender = new EventEmitter();
   @Output() clickDeleteSender = new EventEmitter();
+  filterByAge: string = "all";
 
   editAnimal(clickedAnimal: Animal){
     this.clickEditSender.emit(clickedAnimal);
@@ -53,4 +59,9 @@ export class AnimalListComponent {
   deleteAnimal(clickedAnimal: Animal){
     this.clickDeleteSender.emit(clickedAnimal);
   }
+
+  onChange(filter) {
+    this.filterByAge = filter;
+  }
+
 }

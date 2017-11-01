@@ -7,27 +7,27 @@ import { Animal } from './animal.model';
   <div class="well">
     <h1>New Animal:</h1>
     <label>Enter Animal ID:</label>
-    <input #newId><br>
+    <input type="number" #newId><br>
     <label>Enter Animal Species:</label>
-    <input #newSpecies><br>
+    <input type="text" #newSpecies><br>
     <label>Enter Animal Type:</label>
-    <input #newType><br>
+    <input type="text" #newType><br>
     <label>Enter Animal Name:</label>
-    <input #newName><br>
+    <input type="text" #newName><br>
     <label>Enter Animal Age:</label>
-    <input #newAge><br>
+    <input type="number" #newAge><br>
     <label>Enter Animal Diet:</label>
-    <input #newDiet><br>
+    <input type="text" #newDiet><br>
     <label>Enter Animal Location:</label>
-    <input #newLocation><br>
+    <input type="text" #newLocation><br>
     <label>Enter Amount of Caretakers:</label>
-    <input #newCareTakers><br>
+    <input type="number" #newCareTakers><br>
     <label>Enter Animal Sex:</label>
-    <input #newSex><br>
+    <input type="text" #newSex><br>
     <label>Enter Animal Likes:</label>
-    <input #newLikes><br>
+    <input type="text" #newLikes><br>
     <label>Enter Animal Dislikes:</label>
-    <input #newDislikes><br>
+    <input type="text" #newDislikes><br>
 
     <button class="btn btn-success" (click)="addAnimal(newId.value, newSpecies.value, newType.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCareTakers.value, newSex.value, newLikes.value, newDislikes.value); newId.value=''; newSpecies.value=''; newType.value=''; newName.value=''; newAge.value=''; newDiet.value=''; newLocation.value=''; newCareTakers.value=''; newSex.value=''; newLikes.value=''; newDislikes.value=''; ">Add Animal</button>
   </div>

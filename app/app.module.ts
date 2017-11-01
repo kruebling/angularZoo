@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { AnimalListComponent}  from './animal-list.component';
 import { AnimalEditComponent }  from './animal-edit.component';
 import { AnimalAddComponent }  from './animal-add.component';
+import { AgePipe } from './age.pipe';
 import { FormsModule }  from '@angular/forms';
 
 
@@ -13,7 +14,8 @@ import { FormsModule }  from '@angular/forms';
     AppComponent,
     AnimalListComponent,
     AnimalEditComponent,
-    AnimalAddComponent
+    AnimalAddComponent,
+    AgePipe
    ],
   bootstrap:    [ AppComponent ]
 })
