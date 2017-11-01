@@ -10,6 +10,7 @@ import { ANIMALS } from './seed-animals';
         <h3>Angular Animals:</h3>
         <animal-list [childAnimalList]="masterAnimalList" (clickEditSender)="editAnimal($event)" (clickDeleteSender)="deleteAnimal($event)"></animal-list>
         <hr>
+        <animal-edit [childSelectedAnimal]="selectedAnimal" (doneEditingSender)="doneEditing()">Brushin Hair...</animal-edit>
 
       </div>
     </div>
@@ -30,7 +31,7 @@ export class AppComponent {
     this.masterAnimalList.splice(this.masterAnimalList.indexOf(clickedAnimal), 1);
   }
 
-  finishedEditing() {
+  doneEditing() {
     this.selectedAnimal = null;
   }
 

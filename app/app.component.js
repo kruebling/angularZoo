@@ -20,7 +20,7 @@ var AppComponent = (function () {
     AppComponent.prototype.deleteAnimal = function (clickedAnimal) {
         this.masterAnimalList.splice(this.masterAnimalList.indexOf(clickedAnimal), 1);
     };
-    AppComponent.prototype.finishedEditing = function () {
+    AppComponent.prototype.doneEditing = function () {
         this.selectedAnimal = null;
     };
     AppComponent.prototype.addAnimal = function (newAnimalFromChild) {
@@ -31,7 +31,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'app-root',
-        template: "\n    <div class=\"container\">\n      <div class=\"card card-body\">\n        <h3>Angular Animals:</h3>\n        <animal-list [childAnimalList]=\"masterAnimalList\" (clickEditSender)=\"editAnimal($event)\" (clickDeleteSender)=\"deleteAnimal($event)\"></animal-list>\n        <hr>\n\n      </div>\n    </div>\n  "
+        template: "\n    <div class=\"container\">\n      <div class=\"card card-body\">\n        <h3>Angular Animals:</h3>\n        <animal-list [childAnimalList]=\"masterAnimalList\" (clickEditSender)=\"editAnimal($event)\" (clickDeleteSender)=\"deleteAnimal($event)\"></animal-list>\n        <hr>\n        <animal-edit [childSelectedAnimal]=\"selectedAnimal\" (doneEditingSender)=\"doneEditing()\">Brushin Hair...</animal-edit>\n\n      </div>\n    </div>\n  "
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
