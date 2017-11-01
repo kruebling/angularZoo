@@ -23,6 +23,12 @@
 4. run `gulp build` inside directory
 5. run `gulp serve` inside directory
 
+## Future functionality
+
+_The app will by styled using SASS_
+_The app will calculate the animals age by birthday_
+_The app will filter out incorrect values on input forms_
+
 ## Known Bugs
 
 _App is currently a work in progress_
