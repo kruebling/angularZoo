@@ -29,7 +29,7 @@ import { Animal } from './animal.model';
     <label>Enter Animal Dislikes:</label>
     <input #newDislikes><br>
 
-    <button class="btn btn-success" (click)="addAnimal(newId.value, newSpecies.value, newType.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCareTakers.value, newSex.value, newLikes.value, newDislikes.value)">Add Animal</button>
+    <button class="btn btn-success" (click)="addAnimal(newId.value, newSpecies.value, newType.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCareTakers.value, newSex.value, newLikes.value, newDislikes.value); newId.value=''; newSpecies.value=''; newType.value=''; newName.value=''; newAge.value=''; newDiet.value=''; newLocation.value=''; newCareTakers.value=''; newSex.value=''; newLikes.value=''; newDislikes.value=''; ">Add Animal</button>
   </div>
   `
 })
