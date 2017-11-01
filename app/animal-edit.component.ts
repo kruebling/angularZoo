@@ -35,7 +35,6 @@ import { Animal } from './animal.model';
       </div>
     </div>
   `
-
 })
 
 export class AnimalEditComponent {

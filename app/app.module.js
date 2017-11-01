@@ -10,6 +10,7 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
 var animal_list_component_1 = require("./animal-list.component");
+var animal_edit_component_1 = require("./animal-edit.component");
 var forms_1 = require("@angular/forms");
 var AppModule = (function () {
     function AppModule() {
@@ -21,7 +22,8 @@ AppModule = __decorate([
         imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
         declarations: [
             app_component_1.AppComponent,
-            animal_list_component_1.AnimalListComponent
+            animal_list_component_1.AnimalListComponent,
+            animal_edit_component_1.AnimalEditComponent
         ],
         bootstrap: [app_component_1.AppComponent]
     })
